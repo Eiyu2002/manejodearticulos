@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+
+        <!-- Contenedor principal para selección -->
+        <div id="mainContainerSelect" class="">
+            <!-- Contenedor de secciones -->
+            <div class="containerSeccion container">
+                <% resultsSecciones.forEach(element=> { %>
+                    <!-- Botón para cada sección -->
+                    <button class="btnSeccion btn">
+                        <%= element.NOMBRE_SECCION %>
+                    </button>
+                    <% }); %>
+            </div>
+
+            <!-- Contenedor de consumibles -->
+            <div class="containerConsumibles container none">
+                <% resultsConsumibles.forEach(element=> { %>
+                    <!-- Botón para cada consumible -->
+                    <button class="btnConsumibles btn">
+                        <%= element.NOMBRE_FAMILIA %>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+
+            <!-- Contenedor de objetos -->
+            <div class="container containerObjetos none">
+                <% resultsObjetos.forEach(element=> { %>
+                    <!-- Botón para cada objeto -->
+                    <button class="btnObjetos btn">
+                        <%= element.NOMBRE_FAMILIA %>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+
+            <div class="container containerSalsas none">
+                <% resultsSalsas.forEach(element=> { %>
+                    <!-- Botón para cada objeto -->
+                    <button class="articulo btn">
+                        <h3 class="articuloName">
+                            <%= element.NOMBRE_ARTICULO %>
+                        </h3>
+                        <h4 class="articuloPrice">
+                            $<%= element.PRECIO %>
+                        </h4>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+
+            <!-- Contenedor de comidas -->
+            <div class="container containerComidas none">
+                <% resultsComidas.forEach(element=> { %>
+                    <!-- Botón para cada objeto -->
+                    <button class="articulo btn">
+                        <h3 class="articuloName">
+                            <%= element.NOMBRE_ARTICULO %>
+                        </h3>
+                        <h4 class="articuloPrice">
+                            $<%= element.PRECIO %>
+                        </h4>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+
+            <!-- Contenedor de bebidas -->
+            <div class="container containerBebidas none">
+                <% resultsBebidas.forEach(element=> { %>
+                    <!-- Botón para cada objeto -->
+                    <button class="articulo btn">
+                        <h3 class="articuloName">
+                            <%= element.NOMBRE_ARTICULO %>
+                        </h3>
+                        <h4 class="articuloPrice">
+                            $<%= element.PRECIO %>
+                        </h4>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+
+            <!-- Contenedor de otros -->
+            <div class="container containerOtros none">
+                <!-- Botón para un artículo específico -->
+                <% resultsOtros.forEach(element=> { %>
+                    <!-- Botón para cada objeto -->
+                    <button class="articulo btn">
+                        <h3 class="articuloName">
+                            <%= element.NOMBRE_ARTICULO %>
+                        </h3>
+                        <h4 class="articuloPrice">
+                            $<%= element.PRECIO %>
+                        </h4>
+                    </button>
+                    <% }); %>
+                        <!-- Botón para retroceder -->
+                        <button class="btnBack btn">ATRAS</button>
+            </div>
+        </div>
+
+        <!-- Contenedor para la lista principal -->
+        <div class="mainContainerList">
+            <div class="containerList"></div>
+            <button class="btnMonto btn">VER MONTO</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
